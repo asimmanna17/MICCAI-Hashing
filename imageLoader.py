@@ -79,7 +79,7 @@ class customDataset(data.Dataset):
 
 
 
-#trainpath = "/storage/asim/Group_Hashing_Store/largeSize_updated_dataset/Train/"
+#trainpath = "./Train/"
 '''transform = transforms.Compose([
     transforms.Resize((224, 224)),
     # transforms.RandomHorizontalFlip(),
