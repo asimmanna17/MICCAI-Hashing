@@ -43,13 +43,13 @@ if torch.cuda.is_available():
     model.cuda()
 
 model_name = f'OPHash_{hash_code_length}.pkl'
-dataStorePath = '/storage/asim/OrganDiseaseRetrieval/Datastore/'
+dataStorePath = './OrganDiseaseRetrieval/Datastore/'
 model_path = os.path.join(dataStorePath,model_name)
 model.load_state_dict(torch.load(model_path))
 
 print(model_path)
-galleryfolderpath = "/storage/asim/Group_Hashing_Store/largeSize_updated_dataset/gallery/"
-queryfolderpath = "/storage/asim/Group_Hashing_Store/largeSize_updated_dataset/query/"
+galleryfolderpath = "./gallery/"
+queryfolderpath = "./query/"
 gallery_files = os.listdir(galleryfolderpath)
 gallery_files = random.sample(gallery_files, len(gallery_files))
 query_files = os.listdir(queryfolderpath)
